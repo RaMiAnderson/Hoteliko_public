@@ -1,0 +1,72 @@
+/* Content */
+.Dashcontent{
+    width: 100%;
+    padding-right: 10px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    /* background-color: green; */
+}
+.Dashcontent .leftPart{
+    min-width: 510px;
+    max-width: 750px;
+    width: 38%;
+    height: calc(100vh - 90px);
+    /* background-color: red; */
+}
+.Dashcontent .rightPart{ 
+    width: 60%;
+    max-width: 1060px;
+    height: calc(100vh - 90px);
+    margin-left: 30px;
+}
+.rightPart .findSection
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    padding: 0px 20px;
+    /* background-color: var(--whiteBeMax); */
+    margin-bottom: 0.5px;
+}
+.rightPart .tableAff
+{
+    min-height: 570px;
+    height: calc(100vh - 160px) ;
+    overflow: scroll;
+}
+
+.findSection section
+{
+    display: flex;
+}
+.leftPart .topPart{
+    width: 100%;
+    /* height: 300px; */
+    /* padding: 7px; */
+    /* background-color: red; */
+}
+.topPart .partOne{
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: blue; */
+    /* min-width: 550px; */
+    justify-content: space-between;
+}
+
+.topPart .partOne:not(:first-child){
+    margin-top: 10px;
+}
+.titlePart{
+    opacity: .8;
+    margin-top: 10px;
+    font-size: var(--litleTitle);
+}
+
+.leftPart .bottomPart{
+    /* margin-top: 50px; */
+    height: calc(100% - 350px);
+    width: 95%;
+}

@@ -1,0 +1,135 @@
+import React, {useState,useEffect} from 'react'
+import LoginCover from "../../assets/cover/bg.gif"
+import { useNavigate } from 'react-router-dom'
+import getUser from "../../services/getUserFonction"
+import DarkOrWhite from "../../components/DarkOrWhiteToggle/DarkOrWhite"
+import { useTheme } from '../../context/themeContext'
+import { TextField, Button } from '@mui/material'
+
+//style
+import "./Login.css"
+
+import axios from "axios"
+import {toast} from "react-hot-toast"
+
+const API_URL = import.meta.env.VITE_API_URL;
+
+let LoginUser = () => {
+  const { theme } = useTheme();
+  if(document.body.classList.contains(".bodyClass"))
+  document.querySelector(".bodyClass").style.backgroundColor = "var(--whiteBe)"
+
+  const navigate = useNavigate();
+  const [token, setToken] = useState(sessionStorage.getItem("user"));
+  if(token !== null){
+    const [userDataSRC, setUserDataSRC] = useState(getUser.getDataUser(token));
+    const d = userDataSRC.then(async (data) => await setUserData((data)))
+    const [userData, setUserData] = useState();
+      
+    useEffect(() => {
+        if(userData != undefined){
+          console.log("fonctionee " + userData.fonction.toLowerCase());
+          navigate("/" + userData.fonction.toLowerCase())
+        }
+    })
+  }
+
+  const [username,setUsername] = useState(null)
+  const [password,setPassword] = useState(null)
+
+  const submitForm = async (e) => {
+    e.preventDefault();
+    const emailsLabel = document.querySelector(".emailErr .MuiFormLabel-root")
+    const emailInputDiv = document.querySelector(".emailErr .MuiInputBase-root")
+    const passLabel = document.querySelector(".passErr .MuiFormLabel-root")
+    const passInputDiv = document.querySelector(".passErr .MuiInputBase-root")
+    
+    try{
+      if(username != null && password != null){
+        const res = await axios.post(`${API_URL}/api/auth/login`, {username, password});
+        emailsLabel.classList.remove("Mui-error")
+        emailInputDiv.classList.remove("Mui-error")
+        passLabel.classList.remove("Mui-error")
+        passInputDiv.classList.remove("Mui-error")
+      
+        const tk = JSON.stringify(res.data.token);
+
+        if(res.data.msg == "Connexion réussi"){
+          sessionStorage.setItem("user",tk);
+          if(res.status == 200 && res.data.user.fonction == "Admin")
+            navigate("/admin/dashboard");
+        }else{
+          let message = JSON.stringify(res.data.msg).split("").map(car => car.replace('"', "")).join("");
+          toast.error(message, { duration: 6000});
+          if(message == "Mot de passe incorrect"){
+            passLabel.classList.add("Mui-error")
+            passInputDiv.classList.add("Mui-error")
+          }
+          if(message == "Votre username est introuvable"){
+            emailsLabel.classList.add("Mui-error")
+            emailInputDiv.classList.add("Mui-error")
+          }
+          
+        }
+      }else if(username == null){
+        toast.error("Nom d'utilisateur vide", { duration: 6000});
+        emailsLabel.classList.add("Mui-error")
+        emailInputDiv.classList.add("Mui-error")
+      }else if(password == null){
+        toast.error("Mot de passe vide", { duration: 6000});
+        passLabel.classList.add("Mui-error")
+        passInputDiv.classList.add("Mui-error")
+      }
+      
+      
+    }catch (err)
+    {
+
+    }
+  
+  }
+  
+if(token == null)  
+  return (
+    <>
+      <div className={`loginParent ${theme === "dark" ? "loginParentDark" : ""}`}>
+        <div className='loginThemeToggle'>
+          <DarkOrWhite />
+        </div>
+        <section className="cover"> 
+          <img src={LoginCover}  alt='Cover'/>
+        </section>
+        <section className='sectionForm'>
+
+          <div className='salutation'>
+            <h2 className='TitleLogin'>Hotel'iko</h2>
+            <p>Veuillez vous connecter s'il vous plaît!</p>
+          </div>
+
+          <div className='divForm'>
+            <form  onSubmit={submitForm}>
+              <TextField 
+                id='outlined-required'
+                label="Nom d'utilisateur"
+                defaultValue="" className='textField email emailErr' onChange={e=>setUsername(e.target.value)}/>
+              <TextField 
+                id='outlined-password-input'
+                label="Mot de passe"
+                type='password'
+                autoComplete='current-password'
+                className='textField pass passErr'
+                onChange={e=>setPassword(e.target.value)}/>
+              
+              <Button type='submit' className='btnSubmit' variant="Contained">Se Connecter</Button>
+            </form>
+            
+          </div>
+
+        </section>
+      </div>
+      
+    </>
+  )
+}
+
+export default LoginUser

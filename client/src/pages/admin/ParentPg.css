@@ -1,0 +1,23 @@
+.adminParent{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+.navParent{
+    margin-left: 10px;
+    /* width: 260px; */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    /* position: fixed; */
+}
+
+.DashcontentParent{
+    width: 100%;
+}
+
+.ArticlescontentParent, .ClientcontentParent, .DepensecontentParent, .FournisscontentParent , .InventorycontentParent , .RavicontentParent , .UserManagecontentParent
+{
+    width: 100%;
+}

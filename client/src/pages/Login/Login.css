@@ -1,0 +1,317 @@
+.loginParent {
+    position: relative;
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 15% 12%, #ffe8e5 0%, transparent 35%),
+        radial-gradient(circle at 90% 88%, #dcebff 0%, transparent 30%),
+        linear-gradient(135deg, #f7f9fc 0%, #eef3fb 100%);
+    transition: background 220ms ease, color 220ms ease;
+}
+
+.loginParent .loginThemeToggle {
+    position: absolute;
+    top: 16px;
+    right: 18px;
+    z-index: 20;
+    border: 1px solid #00000012;
+    border-radius: 14px;
+    background-color: #ffffffd9;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 12px 28px #00000012;
+    padding: 2px 8px;
+}
+
+.loginParent .loginThemeToggle .MuiFormControlLabel-root {
+    margin-right: 0;
+}
+
+.loginParent .loginThemeToggle .MuiFormControlLabel-label {
+    color: #1f2937;
+}
+
+.loginParent .cover {
+    position: relative;
+    width: 60%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 28px;
+}
+
+.loginParent .cover img {
+    width: min(72%, 640px);
+    margin-top: -4%;
+    border-radius: 24px;
+    box-shadow: 0 24px 58px #1f293733;
+}
+
+.loginParent .sectionForm {
+    min-height: 100vh;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #ffffffd1;
+    border-left: 1px solid #0000000f;
+    backdrop-filter: blur(8px);
+}
+
+.loginParent .sectionForm .salutation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 6%;
+    width: 65%;
+    text-align: center;
+}
+
+.loginParent .sectionForm .salutation h2 {
+    font-family: arialBlack;
+    font-size: 37px;
+}
+
+.loginParent .sectionForm .salutation p {
+    text-align: center;
+    font-size: 0.92rem;
+    opacity: 0.85;
+}
+
+.loginParent .sectionForm .TitleLogin {
+    color: var(--Them);
+}
+
+.loginParent .sectionForm .salutation {
+    color: var(--noirbe);
+}
+
+.loginParent .sectionForm .divForm {
+    width: 61%;
+}
+
+.loginParent .sectionForm .textField,
+.loginParent .sectionForm .btnSubmit {
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+.loginParent .sectionForm .textField .MuiOutlinedInput-root {
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.loginParent .sectionForm .textField .MuiOutlinedInput-notchedOutline {
+    border-color: #1118273d;
+}
+
+.loginParent .sectionForm .textField .MuiInputLabel-root {
+    color: #374151;
+}
+
+.loginParent .sectionForm .textField .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: var(--Them);
+}
+
+.loginParent .sectionForm .textField .MuiInputBase-input:-webkit-autofill,
+.loginParent .sectionForm .textField .MuiInputBase-input:-webkit-autofill:hover,
+.loginParent .sectionForm .textField .MuiInputBase-input:-webkit-autofill:focus,
+.loginParent .sectionForm .textField .MuiInputBase-input:-webkit-autofill:active {
+    -webkit-text-fill-color: #111827 !important;
+    -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
+    box-shadow: 0 0 0 1000px #ffffff inset !important;
+    caret-color: #111827;
+    border-radius: 10px;
+    transition: background-color 9999s ease-in-out 0s;
+}
+
+.loginParent .sectionForm .textField .MuiInputBase-input:-moz-autofill {
+    color: #111827 !important;
+    box-shadow: 0 0 0 1000px #ffffff inset !important;
+    caret-color: #111827;
+}
+
+.loginParent .sectionForm .btnSubmit {
+    background-color: var(--Them);
+    color: var(--white);
+    text-transform: none;
+    font-size: 1rem;
+    margin-top: 5%;
+    border-radius: 10px;
+    padding: 10px 14px;
+}
+
+.loginParent .sectionForm .btnSubmit:hover {
+    background-color: var(--ThemDur);
+}
+
+.loginParent .sectionForm .btnOtherLog {
+    text-transform: none;
+    color: var(--noirbe);
+    opacity: 0.8;
+    width: 100%;
+}
+
+.loginParent .sectionForm .btnOtherLog:hover {
+    opacity: 1;
+    background-color: var(--grayTransp);
+}
+
+.loginParent .sectionForm .otherLogBtn {
+    text-transform: none;
+    display: flex;
+    justify-content: space-between;
+    border-color: #00bce2b0;
+    box-shadow: 0px 0px 10px #00bce23a;
+    color: var(--Them);
+    margin-top: 12px;
+}
+
+.loginParent .sectionForm .otherLogBtn img {
+    width: 25px;
+    margin-right: 6px;
+}
+
+.loginParent .forgotPasswSection {
+    width: 100%;
+    margin-top: 4%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.loginParentDark {
+    background:
+        radial-gradient(circle at 14% 15%, #1b2f46 0%, transparent 36%),
+        radial-gradient(circle at 87% 84%, #3f2a25 0%, transparent 30%),
+        linear-gradient(135deg, #10161f 0%, #181f2b 100%);
+}
+
+.loginParentDark .loginThemeToggle {
+    background-color: #0f1724db;
+    border-color: #e5e7eb24;
+    box-shadow: 0 14px 26px #00000047;
+}
+
+.loginParentDark .loginThemeToggle .MuiFormControlLabel-label {
+    color: #e5e7eb;
+}
+
+.loginParentDark .cover img {
+    filter: brightness(0.88) saturate(0.95);
+    box-shadow: 0 24px 58px #0000006b;
+}
+
+.loginParentDark .sectionForm {
+    background: #131a25d9;
+    border-left-color: #f8fafc26;
+}
+
+.loginParentDark .sectionForm .salutation,
+.loginParentDark .sectionForm .salutation p {
+    color: #f3f5f8;
+}
+
+.loginParentDark .sectionForm .TitleLogin {
+    color: #ff8f86;
+}
+
+.loginParentDark .sectionForm .textField .MuiOutlinedInput-root {
+    background-color: #1f2937;
+}
+
+.loginParentDark .sectionForm .textField .MuiOutlinedInput-notchedOutline {
+    border-color: #cbd5e14a;
+}
+
+.loginParentDark .sectionForm .textField .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: #ffb0a9;
+}
+
+.loginParentDark .sectionForm .textField .MuiInputLabel-root {
+    color: #d5deea;
+}
+
+.loginParentDark .sectionForm .textField .MuiInputBase-input {
+    color: #f8fafc;
+    -webkit-text-fill-color: #f8fafc;
+}
+
+.loginParentDark .sectionForm .textField .MuiInputBase-input:-webkit-autofill,
+.loginParentDark .sectionForm .textField .MuiInputBase-input:-webkit-autofill:hover,
+.loginParentDark .sectionForm .textField .MuiInputBase-input:-webkit-autofill:focus,
+.loginParentDark .sectionForm .textField .MuiInputBase-input:-webkit-autofill:active {
+    -webkit-text-fill-color: #f8fafc !important;
+    -webkit-box-shadow: 0 0 0 1000px #1f2937 inset !important;
+    box-shadow: 0 0 0 1000px #1f2937 inset !important;
+    caret-color: #f8fafc;
+    border-radius: 10px;
+    transition: background-color 9999s ease-in-out 0s;
+}
+
+.loginParentDark .sectionForm .textField .MuiInputBase-input:-moz-autofill {
+    color: #f8fafc !important;
+    box-shadow: 0 0 0 1000px #1f2937 inset !important;
+    caret-color: #f8fafc;
+}
+
+.loginParentDark .sectionForm .textField .MuiSvgIcon-root {
+    color: #d5deea;
+}
+
+.loginParentDark .sectionForm .btnSubmit {
+    background-color: var(--ThemClaire);
+    box-shadow: 0 10px 24px #eb62584a;
+}
+
+.loginParentDark .sectionForm .btnSubmit:hover {
+    background-color: #ff766c;
+}
+
+@media screen and (max-width: 1024px) {
+    .loginParent {
+        justify-content: center;
+    }
+
+    .loginParent .cover {
+        display: none;
+    }
+
+    .loginParent .sectionForm {
+        width: 82%;
+        border-left: none;
+        border: 1px solid #0000000f;
+        border-radius: 18px;
+        margin: 90px 0 20px;
+        min-height: calc(100vh - 110px);
+    }
+
+    .loginParentDark .sectionForm {
+        border-color: #f8fafc2e;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .loginParent .sectionForm .salutation {
+        margin-bottom: 10vh;
+    }
+
+    .loginParent .sectionForm {
+        width: calc(100% - 24px);
+        margin: 84px 12px 14px;
+        min-height: calc(100vh - 98px);
+    }
+
+    .loginParent .sectionForm .divForm {
+        width: 88%;
+    }
+
+    .loginParent .loginThemeToggle {
+        right: 10px;
+        top: 10px;
+    }
+}

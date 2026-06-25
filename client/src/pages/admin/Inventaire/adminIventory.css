@@ -1,0 +1,14 @@
+.contentParent{
+    padding-left: 16px;
+    width: 100%;
+}
+
+.fournisseurContent
+{
+	width: 100%;
+    padding-right: 10px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    position: relative;
+}

@@ -1,0 +1,74 @@
+@font-face {
+  font-family: arialBlack;
+  src: url(./assets/fonts/Arial-Black/ariblk.ttf);
+}
+@font-face {
+  font-family: poppins;
+  src: url(./assets/fonts/Poppins/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: poppinsBold;
+  src: url(./assets//fonts/Poppins/Poppins-SemiBold.ttf);
+}
+
+*{
+  font-family: poppins;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  /* font-size: 0.96rem; */
+}
+
+
+:root { 
+
+  /* boxshadow */
+    --Paper-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+  /* fontSize */
+  --titlePpal: 1.2rem;
+  --litleTitle: 1.04rem;
+  --textPpal: 0.87rem;
+  --btnText: 0.82rem;
+  --basicText: 0.82rem;
+
+  --noirbe : rgb(29, 29, 29);
+  --noirbeBorder: rgba(29, 29, 29, 0.603);
+  --white : #edf1f4;
+  --whiteKely : #edf1f4cb;
+  --whiteTransp : #969696;
+  --whiteBe : rgb(248, 247, 247);
+  --whiteBeMax : #fff;
+  --whiteNav :  #8ac2ec;
+  --blueTheme : rgb(50, 138, 253);
+  --Them : #eb6258;
+  --ThemClaire : #f87269;
+  --ThemDur : #E42417;
+  --grayTransp : #3f3d5541;
+  --grayTranspBe : #3f3d554f;
+  --grayTranspBeMax : #3f3d5563;
+  --GreenThem : rgb(79, 182, 79);
+
+  /* CardMoney Color*/
+  --cardMVente : #2196F3;
+  --cardMRevient : #e9af00;
+  --cardMDepense : #eb6258;
+  --cardMEncaisse : rgb(79, 182, 79);
+
+  /* dark Mode */
+
+  --darkBodyColor : rgb(37, 37, 37);
+  --darkScrollColor : rgb(61, 61, 61);
+  --darkScrollColorBe : rgb(70, 70, 70);
+  --darkScrollColorBeMax : rgb(85, 85, 85);
+}
+html.light,
+body.light{
+  background-color: var(--whiteBe) !important;
+}
+html.dark,
+body.dark{
+  background-color: var(--darkBodyColor);
+  color:white;
+}

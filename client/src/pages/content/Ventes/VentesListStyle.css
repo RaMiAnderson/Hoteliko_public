@@ -1,0 +1,322 @@
+.fournisseurContent .salesPage {
+	width: 100%;
+	max-width: 1776px;
+	height: calc(100vh - 90px);
+	position: relative;
+}
+
+.fournisseurContent .sales-main-content {
+	width: 100%;
+	height: calc(100vh - 90px);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.fournisseurContent .sales-main-content .findSection {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	width: 100%;
+	min-height: 70px;
+	padding: 0px 0px 0px 20px;
+	margin-bottom: 0.5px;
+}
+
+.fournisseurContent .sales-main-content .tableAff {
+	min-height: 570px;
+	height: calc(100vh - 160px);
+	width: 100%;
+}
+
+.fournisseurContent .salesPage.popup-open .sales-main-content {
+	filter: blur(4px);
+	pointer-events: none;
+	user-select: none;
+}
+
+.fournisseurContent .sales-filter-group {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.fournisseurContent .sales-filter-label {
+	font-size: var(--basicText);
+	opacity: 0.85;
+	white-space: nowrap;
+}
+
+.fournisseurContent .sales-filter-select {
+	height: 40px;
+	min-width: 145px;
+	padding: 0px 32px 0px 11px;
+	border-radius: 7px;
+	border: 1px solid;
+	font-size: var(--basicText);
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.fournisseurContent .sales-filter-select.light {
+	background-color: var(--whiteBe);
+	color: var(--noirbe);
+	border-color: var(--noirbeBorder);
+}
+
+.fournisseurContent .sales-filter-select.dark {
+	background-color: var(--noirbe);
+	color: var(--whiteBe);
+	border-color: var(--whiteTransp);
+}
+
+.fournisseurContent .sales-pay-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 50;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	background-color: rgba(0, 0, 0, 0.12);
+}
+
+.fournisseurContent .sales-pay-popup {
+	width: min(520px, 100%);
+	border-radius: 10px;
+	padding: 18px 20px 22px 20px;
+}
+
+.fournisseurContent .sales-pay-header {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.fournisseurContent .sales-pay-header h3 {
+	font-size: 1.05rem;
+	opacity: 0.9;
+	color: var(--ThemClaire);
+}
+
+.fournisseurContent .sales-ticket-id {
+	color: var(--ThemClaire);
+}
+
+.fournisseurContent .sales-pay-line {
+	margin-top: 12px;
+	font-size: 0.94rem;
+	opacity: 0.9;
+}
+
+.fournisseurContent .sales-pay-input {
+	margin-top: 20px;
+	width: 100%;
+}
+
+.fournisseurContent .sales-pay-summary {
+	margin-top: 22px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	font-size: 0.95rem;
+	opacity: 0.9;
+}
+
+.fournisseurContent .sales-pay-actions {
+	margin-top: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 10px;
+}
+
+.fournisseurContent .ticket-detail-page .sales-main-content {
+	padding-top: 14px;
+}
+
+.fournisseurContent .sales-detail-toolbar {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.fournisseurContent .sales-detail-actions {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	flex-wrap: wrap;
+}
+
+.fournisseurContent .sales-detail-summary {
+	width: 100%;
+	margin-top: 14px;
+	padding: 16px 18px;
+	border-radius: 10px;
+	/* background-color: rgba(0, 0, 0, 0.03); */
+}
+
+/* .dark .fournisseurContent .sales-detail-summary {
+	background-color: rgba(255, 255, 255, 0.05);
+} */
+
+.fournisseurContent .sales-detail-grid {
+	margin-top: 12px;
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 10px 14px;
+	font-size: 0.92rem;
+	opacity: 0.92;
+}
+
+.fournisseurContent .sales-detail-note {
+	margin-top: 14px;
+	font-size: 0.9rem;
+	color: var(--ThemClaire);
+}
+
+.fournisseurContent .ticket-detail-row-actions {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	width: 100%;
+}
+
+.fournisseurContent .sales-modal-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 70;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	background-color: rgba(0, 0, 0, 0.12);
+}
+
+.fournisseurContent .sales-modal-content {
+	width: min(560px, 100%);
+	border-radius: 10px;
+	padding: 18px 20px 22px 20px;
+}
+
+.fournisseurContent .sales-modal-large {
+	width: min(1240px, 100%);
+	max-height: min(88vh, 900px);
+	display: flex;
+	flex-direction: column;
+}
+
+.fournisseurContent .sales-modal-small {
+	width: min(460px, 100%);
+}
+
+.fournisseurContent .sales-modal-header {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.fournisseurContent .sales-modal-header h3 {
+	font-size: 1.05rem;
+	opacity: 0.9;
+}
+
+.fournisseurContent .sales-modal-title-accent {
+	color: var(--ThemClaire);
+}
+
+.fournisseurContent .sales-modal-form {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+
+.fournisseurContent .sales-add-toolbar {
+	margin-top: 16px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	flex-wrap: wrap;
+}
+
+.fournisseurContent .sales-add-table {
+	margin-top: 14px;
+	height: min(58vh, 560px);
+}
+
+.fournisseurContent .ticket-detail-add-actions {
+	width: 100%;
+	max-width: 170px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	margin: 0 auto;
+	padding: 0 4px;
+	box-sizing: border-box;
+}
+
+.fournisseurContent .sales-add-empty {
+	margin-top: 10px;
+	font-size: 0.9rem;
+	opacity: 0.8;
+}
+
+.fournisseurContent .sales-modal-line {
+	margin-top: 18px;
+	font-size: 0.95rem;
+	line-height: 1.45;
+	opacity: 0.9;
+}
+
+.fournisseurContent .sales-modal-actions {
+	margin-top: 22px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 10px;
+}
+
+@media (max-width: 1320px) {
+	.fournisseurContent .sales-main-content .findSection {
+		padding: 10px 0px 0px 20px;
+	}
+
+	.fournisseurContent .sales-main-content .findSection section {
+		width: 100%;
+		justify-content: flex-start;
+	}
+
+	.fournisseurContent .sales-detail-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 760px) {
+	.fournisseurContent .sales-detail-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.fournisseurContent .sales-modal-actions,
+	.fournisseurContent .sales-detail-actions {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.fournisseurContent .sales-modal-large {
+		max-height: min(90vh, 920px);
+	}
+
+	.fournisseurContent .sales-add-table {
+		height: min(52vh, 500px);
+	}
+}
