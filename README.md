@@ -1,46 +1,31 @@
 # Hotel'iko
 
-## V1.0
+Hotel'iko is a hotel and restaurant management system designed to handle room reservations, check-in/check-out processes, and restaurant operations including billing, inventory tracking, expenses, and purchase history. It also supports ticket printing via Xprinter.
 
-## Minimum Display Requirement : 
-### Display : HD 720p (1280 x 720)
+> ⚠️ This project is an incomplete version. If you are interested, feel free to contact me.
 
-## Recemended Display :
-### Display : FHD 1080p (1920 x 1080)
+---
 
-## Configuration IDE recommandée
+## 📱 Display Requirements
 
-[VSCode](https://code.visualstudio.com/) (and disable Vetur).
+### Minimum Requirement
+- Display: HD 720p (1280 × 720)
 
+### Recommended Requirement
+- Display: Full HD 1080p (1920 × 1080)
 
-## Installation des modules Node : dans le dossier client/
-```sh
+---
+
+## 🧑‍💻 Recommended IDE
+
+- [Visual Studio Code](https://code.visualstudio.com/)
+  (Recommended: disable Vetur if installed)
+
+---
+
+## 📦 Installation
+
+### Client setup
+```bash
+cd client
 npm install
-```
-## Installation des modules Node : dans le dossier server/
-```sh
-npm install
-```
-## Après (assurez-vous d'avoir MongoDB déjà installé) : 
-### 1. Lancez cette commande dans le dossier server/
-```sh
-npm run dev
-```
-
-`
-
-### Default
-```sh
-SERVER_PORT=8011
-CLIENT_API=http://localhost:5173
-DB_HOST=localhost
-DB_PORT=3306
-DB_USER=root
-DB_PASS=
-DB_NAME=restricted
-
-
-VITE_FRONT_URL=http://localhost:5173
-VITE_API_URL=http://localhost:8011
-
-```
